@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: protegpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: protegpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: protegpipelinesjavascriptdocker 
+          image: cecontainerregtest.azurecr.io/protegpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
